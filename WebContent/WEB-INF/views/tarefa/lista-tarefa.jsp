@@ -17,7 +17,7 @@
 	
 		<c:import url="cabecalho.jsp"></c:import>
 	
-		<h2>Lista de Tarefas</h2>
+		<h2>Lista de Tarefas - Usuario: ${usuarioLogado.usuario}</h2>		
 		<hr />
 	
 		<a href="novaTarefa">Incluir Nova Tarefa</a><br><br><br>
@@ -48,9 +48,12 @@
 					<td><a href="removeTarefa?id=${lista.id}">Excluir</a></td>
 					<td><a href="mostraTarefa?id=${lista.id}">Alterar</a> 		
 				</tr>
-			</c:forEach>
-		
+			</c:forEach>		
 		</table>		
+
+		<br /><br />		
+		<a href="desconectarUsuario">Desconectar Usuario</a>
+		
 	
 		<script type="text/javascript">		
 			function finalizaTarefa(id){
